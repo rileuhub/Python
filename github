@@ -1,0 +1,3 @@
+hi_connor = input('Y is connor so silly? ')
+if hi_connor == 'because hes dumb':
+    print('correct!!')

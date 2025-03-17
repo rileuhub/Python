@@ -1,0 +1,29 @@
+high = 42
+low = 34
+zero = 0
+stop = -1
+temp_list = []
+#Used try to test my code for invalid inputs
+#Used while loops to keep the program running until the user enters a number greater than 42 or less than 34
+while True:
+    try:
+        inp = float(input('Enter the temperature: '))
+        while inp != stop:
+            temp_list.append(inp)
+            inp = float(input('Enter the temperature: '))
+        if inp < high:
+            break
+    
+    except ValueError:
+        print('Invalid temperature.')   
+    #Used for loop to iterate through the list and check if the input is greater than 42 or less than 34
+for inp in temp_list:
+
+    if inp <= high and inp >= low:
+        print('just right')
+    elif inp <= low:
+        print('too cold')
+    else:
+        print('too hot')
+#EXECELLECE!
+        
