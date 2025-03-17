@@ -1,9 +1,15 @@
 
 #create a list of pizza orders
 pizzas = ['cheese', 'chicken', 'pepperoni', 'veggie']
-#Create 
+#Create list to store how many of each pizza
+quantities = []
 
 #Go through thelist of pizza in order
 for pizza in pizzas:
-    print(pizza)
+    #Ask how many of each pizza they want
+    howmany = input(f'How many {pizza} do we want? ')
+    quantities.append(howmany)
+
+print(quantities)
+
 
