@@ -1,0 +1,24 @@
+
+stop = 0
+volts = 1.2
+volt_list = []
+#Used try to test my code for invalid inputs
+#Used while loop to keep the program running until the user enters a negative number
+while True:
+    try:
+        inp = float(input('Enter your input: '))
+        while inp >= stop:
+            volt_list.append(inp)
+            inp = float(input('Enter your input: '))
+
+            if inp < stop:
+                break
+    #Used except to catch the ValueError and print a message to the user
+    except ValueError:
+        print('Not robot compliant')
+    #Used for loop to iterate through the list and check if the input is greater than 1.2
+for inp in volt_list:
+    if inp >= volts:
+        print('Beep')
+    else:
+        print('Boop')
