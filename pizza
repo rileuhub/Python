@@ -1,0 +1,9 @@
+
+#create a list of pizza orders
+pizzas = ['cheese', 'chicken', 'pepperoni', 'veggie']
+#Create 
+
+#Go through thelist of pizza in order
+for pizza in pizzas:
+    print(pizza)
+
