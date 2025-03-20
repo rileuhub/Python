@@ -6,11 +6,12 @@ BALANCE = 200
 while True:
     try:
         money = int(input('Enter the amount spent: '))
-        if money == 0:
+        if money == stop:
             break
-        while money >= stop:
+        elif money > BALANCE:
+             spent_list.append(money)
+        elif money > stop:
             spent_list.append(money)
-            money = int(input('Enter the amount spent: '))
             if money == stop:
                 break
         if sum(spent_list) >= BALANCE:
@@ -18,7 +19,7 @@ while True:
     #Used except to catch the ValueError and print a message to the user
     except ValueError:
         print('Invalid amount')
-print('My bank balance have been:')
+print('My bank balances have been:')
 print(BALANCE)
 for money in spent_list:
         BALANCE -= money
