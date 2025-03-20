@@ -5,14 +5,16 @@ BALANCE = 200
 #Used try to test my code for invalid inputs
 while True:
     try:
-        money = float(input('Enter the amount spent: '))
-        if money >= stop:
+        money = int(input('Enter the amount spent: '))
+        if money == 0:
+            break
+        while money >= stop:
             spent_list.append(money)
-        if money >= stop:
+            money = int(input('Enter the amount spent: '))
+            if money == stop:
+                break
+        if sum(spent_list) >= BALANCE:
             break
-        elif money == BALANCE:
-            break
-        
     #Used except to catch the ValueError and print a message to the user
     except ValueError:
         print('Invalid amount')

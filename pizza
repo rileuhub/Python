@@ -7,9 +7,13 @@ quantities = []
 #Go through thelist of pizza in order
 for pizza in pizzas:
     #Ask how many of each pizza they want
-    howmany = input(f'How many {pizza} do we want? ')
+    howmany = int(input(f'How many {pizza} do we want? '))
     quantities.append(howmany)
 
-print(quantities)
+#loop through all the pizzas
+for pizza, quantity in zip(pizzas, quantities):
+    if quantity > 0:
+        print(f'{pizza.capitalize()}: {quantity}')
+
 
 
