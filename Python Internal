@@ -1,0 +1,2 @@
+x_coords = int(input('Enter X coordinate: '))
+y_coords = int(input('Enter Y coordinate: '))

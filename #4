@@ -1,0 +1,33 @@
+#Name all the number as constants
+PASS = 80
+HIGHEST_SCORE = 100
+#Create a list to store the scores
+score_list = []
+#Used while True loop to keep the program running until the user types 'done'
+#Used try to test my code for numbers lower than 0 and strings
+while True:    
+    try:
+        score = input("Enter a score, or type 'done' to exit: ")
+        if score == 'done':
+            break
+        score = float(score)
+        if score >= 0 and score <= HIGHEST_SCORE:
+            score_list.append(score)
+        elif score < 0:
+            print('Please type a positive number')
+    except ValueError:
+        print('Please type a number')
+#Used for loop to print the number of smart students in the class
+smart_student = 0
+for score in score_list:
+    if score >= PASS:
+        smart_student += 1
+    if len(score_list) == 1:
+        print('This class has 1 smart student!')
+        break
+    else:
+        print(f'This class has {smart_student} smart students!')
+        break
+
+
+
